@@ -34,6 +34,8 @@
             this.BtnStart = new TulparUI.Controls.TulparButton();
             this.BtnStop = new TulparUI.Controls.TulparButton();
             this.CardStartStop = new TulparUI.Controls.TulparCard();
+            this.switchMusic = new TulparUI.Controls.TulparSwitch();
+            this.BtnLongBreakStart = new TulparUI.Controls.TulparButton();
             this.BtnDuraklat = new TulparUI.Controls.TulparButton();
             this.BtnShortBreakStart = new TulparUI.Controls.TulparButton();
             this.CardSettings = new TulparUI.Controls.TulparCard();
@@ -42,8 +44,7 @@
             this.LbMsg = new System.Windows.Forms.Label();
             this.workTimer = new System.Windows.Forms.Timer(this.components);
             this.breakTimer = new System.Windows.Forms.Timer(this.components);
-            this.BtnLongBreakStart = new TulparUI.Controls.TulparButton();
-            this.switchMusic = new TulparUI.Controls.TulparSwitch();
+            this.label1 = new System.Windows.Forms.Label();
             this.CardStartStop.SuspendLayout();
             this.CardSettings.SuspendLayout();
             this.tulparCard1.SuspendLayout();
@@ -142,6 +143,43 @@
             this.CardStartStop.Size = new System.Drawing.Size(471, 159);
             this.CardStartStop.TabIndex = 4;
             // 
+            // switchMusic
+            // 
+            this.switchMusic.AutoSize = true;
+            this.switchMusic.Depth = 0;
+            this.switchMusic.Location = new System.Drawing.Point(14, 108);
+            this.switchMusic.Margin = new System.Windows.Forms.Padding(0);
+            this.switchMusic.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.switchMusic.MouseState = TulparUI.MouseState.HOVER;
+            this.switchMusic.Name = "switchMusic";
+            this.switchMusic.Ripple = true;
+            this.switchMusic.Size = new System.Drawing.Size(90, 37);
+            this.switchMusic.TabIndex = 8;
+            this.switchMusic.Text = "Müzik";
+            this.switchMusic.UseVisualStyleBackColor = true;
+            this.switchMusic.Visible = false;
+            // 
+            // BtnLongBreakStart
+            // 
+            this.BtnLongBreakStart.AutoSize = false;
+            this.BtnLongBreakStart.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BtnLongBreakStart.Density = TulparUI.Controls.TulparButton.TulparButtonDensity.Default;
+            this.BtnLongBreakStart.Depth = 0;
+            this.BtnLongBreakStart.Enabled = false;
+            this.BtnLongBreakStart.HighEmphasis = true;
+            this.BtnLongBreakStart.Icon = null;
+            this.BtnLongBreakStart.Location = new System.Drawing.Point(194, 22);
+            this.BtnLongBreakStart.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.BtnLongBreakStart.MouseState = TulparUI.MouseState.HOVER;
+            this.BtnLongBreakStart.Name = "BtnLongBreakStart";
+            this.BtnLongBreakStart.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.BtnLongBreakStart.Size = new System.Drawing.Size(80, 80);
+            this.BtnLongBreakStart.TabIndex = 10;
+            this.BtnLongBreakStart.Text = "Uzun Molaya Başla";
+            this.BtnLongBreakStart.Type = TulparUI.Controls.TulparButton.TulparButtonType.Outlined;
+            this.BtnLongBreakStart.UseAccentColor = false;
+            this.BtnLongBreakStart.UseVisualStyleBackColor = true;
+            // 
             // BtnDuraklat
             // 
             this.BtnDuraklat.AutoSize = false;
@@ -237,7 +275,7 @@
             // LbMsg
             // 
             this.LbMsg.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.LbMsg.Font = new System.Drawing.Font("Tempus Sans ITC", 50.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbMsg.Font = new System.Drawing.Font("Tw Cen MT Condensed", 50.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbMsg.Location = new System.Drawing.Point(0, 360);
             this.LbMsg.Name = "LbMsg";
             this.LbMsg.Size = new System.Drawing.Size(1200, 173);
@@ -255,47 +293,21 @@
             this.breakTimer.Interval = 1000;
             this.breakTimer.Tick += new System.EventHandler(this.BreakTimer_Tick);
             // 
-            // BtnLongBreakStart
+            // label1
             // 
-            this.BtnLongBreakStart.AutoSize = false;
-            this.BtnLongBreakStart.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BtnLongBreakStart.Density = TulparUI.Controls.TulparButton.TulparButtonDensity.Default;
-            this.BtnLongBreakStart.Depth = 0;
-            this.BtnLongBreakStart.Enabled = false;
-            this.BtnLongBreakStart.HighEmphasis = true;
-            this.BtnLongBreakStart.Icon = null;
-            this.BtnLongBreakStart.Location = new System.Drawing.Point(194, 22);
-            this.BtnLongBreakStart.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.BtnLongBreakStart.MouseState = TulparUI.MouseState.HOVER;
-            this.BtnLongBreakStart.Name = "BtnLongBreakStart";
-            this.BtnLongBreakStart.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.BtnLongBreakStart.Size = new System.Drawing.Size(80, 80);
-            this.BtnLongBreakStart.TabIndex = 10;
-            this.BtnLongBreakStart.Text = "Uzun Molaya Başla";
-            this.BtnLongBreakStart.Type = TulparUI.Controls.TulparButton.TulparButtonType.Outlined;
-            this.BtnLongBreakStart.UseAccentColor = false;
-            this.BtnLongBreakStart.UseVisualStyleBackColor = true;
-            // 
-            // switchMusic
-            // 
-            this.switchMusic.AutoSize = true;
-            this.switchMusic.Depth = 0;
-            this.switchMusic.Location = new System.Drawing.Point(14, 108);
-            this.switchMusic.Margin = new System.Windows.Forms.Padding(0);
-            this.switchMusic.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.switchMusic.MouseState = TulparUI.MouseState.HOVER;
-            this.switchMusic.Name = "switchMusic";
-            this.switchMusic.Ripple = true;
-            this.switchMusic.Size = new System.Drawing.Size(90, 37);
-            this.switchMusic.TabIndex = 8;
-            this.switchMusic.Text = "Müzik";
-            this.switchMusic.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(239, 247);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "label1";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 533);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.LbMsg);
             this.Controls.Add(this.tulparCard1);
             this.Controls.Add(this.CardSettings);
@@ -311,6 +323,7 @@
             this.CardSettings.ResumeLayout(false);
             this.tulparCard1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -331,5 +344,6 @@
         private TulparUI.Controls.TulparButton BtnDuraklat;
         private TulparUI.Controls.TulparButton BtnLongBreakStart;
         private TulparUI.Controls.TulparSwitch switchMusic;
+        private System.Windows.Forms.Label label1;
     }
 }

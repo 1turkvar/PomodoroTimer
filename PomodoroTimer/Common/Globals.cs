@@ -5,6 +5,7 @@
         public static MainForm mainForm;
         public static SettingsForm settingsForm;
 
+        public static int pomodoroCount = 0;
 
         //Süreler
         public static int pomodoroTime;

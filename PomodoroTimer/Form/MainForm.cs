@@ -1,7 +1,4 @@
-﻿using PomodoroTimer;
-using System;
-using System.Threading.Tasks;
-using System.Threading;
+﻿using System;
 using System.Windows.Forms;
 
 namespace PomodoroTimer
@@ -27,11 +24,11 @@ namespace PomodoroTimer
 
         private void WorkTimer_Tick(object sender, EventArgs e)
         {
-            if (switchMusic.Checked == true)
-            {
-                PlayMp3.audioThread = new Thread(() => PlayMp3.PlayMP3(Application.StartupPath + "\\Sounds\\\\workingSounds\\" + Globals.workMusic, pomodoroDuration));
-                PlayMp3.audioThread.Start();
-            }
+            //if (switchMusic.Checked == true)
+            //{
+            //    PlayMp3.audioThread = new Thread(() => PlayMp3.PlayMP3(Application.StartupPath + "\\Sounds\\\\workingSounds\\" + Globals.workMusic, pomodoroDuration));
+            //    PlayMp3.audioThread.Start();
+            //}
 
             if (pomodoroDuration > 0)
             {
@@ -43,9 +40,11 @@ namespace PomodoroTimer
                 PlayMp3.PlayAlert(Application.StartupPath + "\\Sounds\\alarmSounds\\" + Globals.pomodoroAlarm);
                 workTimer.Stop();
                 LbMsg.Text = ("Pomodoro tamamlandı. Mola verin!");
+                Globals.pomodoroCount++;
+                label1.Text = Globals.pomodoroCount.ToString();
                 BtnStart.Enabled = false;
                 BtnShortBreakStart.Enabled = true;
-                pomodoroDuration = (Convert.ToInt32(Globals.settingsForm.tPomodoroTime.Text) * 60);
+                pomodoroDuration = (Convert.ToInt32(Globals.pomodoroTime) * 60);
             }
         }
 
@@ -101,5 +100,6 @@ namespace PomodoroTimer
             workTimer.Stop();
             breakTimer.Stop();
         }
+
     }
 }
